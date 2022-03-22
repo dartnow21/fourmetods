@@ -2,7 +2,7 @@ import numpy as np
 import sympy
 from sympy import *
 import time
-from GoldenSection import GoldenSection
+from fourmetods.GoldenSection import *
 import matplotlib.pyplot as plt
 import numexpr as ne
 import matplotlib.animation as animation
