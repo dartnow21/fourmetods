@@ -4,7 +4,7 @@ from fourmetods.SearchExtremes import *
 from fourmetods.MethodLagranja import *
 from fourmetods.SearchExtremes import *
 from fourmetods.GoldenSection import *
-from fourmetods.BrentMet import *
+from fourmetods.BrentMet_var2 import *
 from fourmetods.BFGS import *
 from fourmetods.PorabolMet import *
 
