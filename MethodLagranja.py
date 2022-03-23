@@ -7,7 +7,35 @@ import matplotlib.pyplot as plt
 import re
 class MethodLagranja:
     def find(self, x, y, x_y, f, z, x_from, x_to, y_from, y_to, left_x_y):
-
+        """
+        Функция находит экстермумы, седловые точки и точки дальнейшего исследования
+        по методу лагранжа и строит 3Д график
+        Parameters
+        ===========
+        :param x: str
+            символ х
+        :param y: str
+            символ у
+        :param x_y:
+            ограничивающая функция (пример: x**2+y**2-10)
+        :param f:
+            строковая функция f(x, y)
+        :param z: str
+            строковая функция f(x, y) + (лямбда) * (ограничивающую функцию)
+        :param x_from: float
+            интервал "от" по х
+        :param x_to: float
+            интервал "до" по х
+        :param y_from: float
+            интервал "от" по у
+        :param y_to: float
+            интервал "до" по у
+        :param left_x_y
+            левая часть ограничивающей функции x_y
+        Returns
+        ===========
+        3Д график с отмеченными точкам
+        """
         # Преобразуем произвольное выражение в тип, который можно использовать внутри SymPy
         L = symbols('L')
         func = sympify(z)

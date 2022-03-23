@@ -10,6 +10,28 @@ from mpl_toolkits.axes_grid1 import make_axes_locatable
 
 class SearchExtremes:
     def find(self, x, y, z, x_from, x_to, y_from, y_to):
+        """
+        Функция находит экстермумы, седловые точки и точки дальнейшего исследования и строит 3Д график
+        Parameters
+        ===========
+        :param x: str
+            символ х
+        :param y: str
+            символ у
+        :param z: str
+            строковая функция
+        :param x_from: float
+            интервал "от" по х
+        :param x_to: float
+            интервал "до" по х
+        :param y_from: float
+            интервал "от" по у
+        :param y_to: float
+            интервал "до" по у
+        Returns
+        ===========
+        3Д график с отмеченными точками экстремумов
+        """
 
         # Преобразуем произвольное выражение в тип, который можно использовать внутри SymPy
         func = sympify(z)

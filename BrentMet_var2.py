@@ -15,7 +15,27 @@ class BrentMet:
         # yv = c1 - b1 * b1 / (4 * a1)
         return self.xv
 
-    def find(self, y, a, b, eps, iterations):
+    def find(self, y, a, b, eps, flag, iterations):
+        """
+        Функция находит экстремум функции одной переменной методом Брента.
+        Parameters
+        ===========
+        :param y: str
+            строковая функция f(x)
+        :param a: float
+            интервал "от" по х
+        :param b: float
+            интервал "до" по х
+        :param eps: float
+            эпсилон - точность исследования
+        :param flag: int
+            если 1 то промежуточные расчеты выводятся если 0 то нет
+        :param iterations: int
+            количество итераций
+        Returns
+        ===========
+        экстремум функции, если flag=1, выводятся промежуточные значения
+        """
         func = sympify(y)
         x = Symbol('x')
         r = (3 - 5 ** (1 / 2)) / 2
@@ -76,6 +96,8 @@ class BrentMet:
                 v = w
                 w = xx
                 xx = u
+            if flag == 1:
+                print(f'итерация {i} минимальные значение {xx}')
         if ii != 1:
             print(f'Найдено неточное значение: {xx}')
             #function3 = BrentMet()

@@ -5,6 +5,32 @@ import numpy as np
 
 class BFGS:
     def find(self, z, Xl, Xu, Yl, Yu, point_for_start, e, iter):
+        """
+        Функция находит экстремум функции с помощью Алгоритма Бройдена — Флетчера — Гольдфарба — Шанно.
+        Parameters
+        ===========
+        :param z: str
+            строковая функция f(x)
+        :param Xl: float
+            интервал "от" по х
+        :param Xu: float
+            интервал "до" по х
+        :param Yl: float
+            интервал "от" по y
+        :param Yu: float
+            интервал "до" по y
+        :param point_for_start: float
+            точка старта
+        :param e: float
+            эпсилон - точность исследования
+        :param flag: int
+            если 1 то промежуточные расчеты выводятся если 0 то нет
+        :param iter: int
+            количество итераций
+        Returns
+        ===========
+        экстремум функции
+        """
 
         func = sympify(z)
         x, y, alpha = symbols('x y alpha')
