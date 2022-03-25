@@ -9,4 +9,4 @@
 
 ## Демонстрация возможностей программы
 
-Пример программы представлен в GoogleColab: https://colab.research.google.com/drive/1peaK5YFVEUDANo33wcwKDJ5CBQ-CplGP#scrollTo=A_vPMABxB__0
+Пример программы представлен в GoogleColab: https://colab.research.google.com/drive/1peaK5YFVEUDANo33wcwKDJ5CBQ-CplGP?usp=sharing
